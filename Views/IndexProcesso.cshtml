@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+ <h1> Cliente e seu tipo de Processo.</h1>
+</div class="col-md-6">
+<a 
+<div id="divtabela">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">PESID </th>
+                <th scope="col">PROID </th>
+                <th scope="col">TIPID </th>
+                <th scope="col">DATAVINCULO </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in @ViewBag.ClienteProcesso)
+            {
+                    <tr>
+                    <td>@item.PESID</td>
+                    <td>@item.PROID</td>
+                    <td>@item.TIPID</td>
+                    <td>@item.DATAVINCULO</td>
+                <tr>
+            }
+            
+        </tbody>
+    </table>
+</div>

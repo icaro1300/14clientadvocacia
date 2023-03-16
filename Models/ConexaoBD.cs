@@ -4,19 +4,16 @@ namespace AdvocaciaCliente.Models
 {
     public class ConexaoBD
     {
-        private SqlConnection banco;
-        public SqlConnection getconexao()
+        private static SqlConnection banco;
+
+        public static SqlConnection getConexao()
         {
             if (banco == null)
             {
-                banco = new SqlConnection(@"Server=,.\SENAI2022; Database=BDJURIDICO; User id =sa; Password= senai.123);");
+                banco = new SqlConnection(@"Server=.\SENAI2022; Database=BDJURIDICO; User Id =sa; Password=senai.123;");
             }
-            return null;
-        }
 
-        internal static object getConexao()
-        {
-            throw new NotImplementedException();
+            return banco;
         }
     }
 }
